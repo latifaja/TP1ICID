@@ -4,7 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <bean id="d" class="ext.DaoImplV2"></bean>
     <bean id="metier" class="metier.IMetierImpl">
-        <property name="dao" ref="d"></property> <!--injection via setter-->
+        <!-- <property name="dao" ref="d"></property>    //injection via setter-->
+    <constructor-arg ref="d"></constructor-arg>
+
     </bean>
 
 </beans>

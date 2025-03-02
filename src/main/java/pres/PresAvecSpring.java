@@ -11,7 +11,8 @@ public class PresAvecSpring {
 
         // You can now retrieve beans from the context (example)
         // MyBean myBean = context.getBean(MyBean.class);
-        IMetier metier = (IMetier) context.getBean("metier");
+       // IMetier metier = (IMetier) context.getBean("metier");
+        IMetier metier =  context.getBean(IMetier.class);
         System.out.println("res" + metier.calcul());
     }
 
